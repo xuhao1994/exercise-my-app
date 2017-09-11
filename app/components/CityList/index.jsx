@@ -10,20 +10,50 @@ class CityList extends React.Component {
     }
     render() {
         return (
-            <div>
-            <h1>城市列表</h1>
-	            <ul>
-	            	<li onClick={this.handleclick.bind(this,'北京')}>北京</li>
-	            	<li onClick={this.handleclick.bind(this,'上海')}>上海</li>
-	            	<li onClick={this.handleclick.bind(this,'杭州')}>杭州</li>
-	            	<li onClick={this.handleclick.bind(this,'广东')}>广东</li>
-	            	<li onClick={this.handleclick.bind(this,'深圳')}>深圳</li>
-	            	<li onClick={this.handleclick.bind(this,'厦门')}>厦门</li>
-	            </ul>
+            <div className="city-list-container">
+                <h3>热门城市</h3>
+                <ul className="clear-fix">
+                    <li>
+                        <span onClick={this.clickHandle.bind(this, '北京')}>北京</span>
+                    </li>
+                    <li>
+                        <span onClick={this.clickHandle.bind(this, '上海')}>上海</span>
+                    </li>
+                    <li>
+                        <span onClick={this.clickHandle.bind(this, '杭州')}>杭州</span>
+                    </li>
+                    <li>
+                        <span onClick={this.clickHandle.bind(this, '广州')}>广州</span>
+                    </li>
+                    <li>
+                        <span onClick={this.clickHandle.bind(this, '苏州')}>苏州</span>
+                    </li>
+                    <li>
+                        <span onClick={this.clickHandle.bind(this, '深圳')}>深圳</span>
+                    </li>
+                    <li>
+                        <span onClick={this.clickHandle.bind(this, '南京')}>南京</span>
+                    </li>
+                    <li>
+                        <span onClick={this.clickHandle.bind(this, '天津')}>天津</span>
+                    </li>
+                    <li>
+                        <span onClick={this.clickHandle.bind(this, '重庆')}>重庆</span>
+                    </li>
+                    <li>
+                        <span onClick={this.clickHandle.bind(this, '厦门')}>厦门</span>
+                    </li>
+                    <li>
+                        <span onClick={this.clickHandle.bind(this, '武汉')}>武汉</span>
+                    </li>
+                    <li>
+                        <span onClick={this.clickHandle.bind(this, '西安')}>西安</span>
+                    </li>
+                </ul>
             </div>
         )
     }
-    handleclick(newCity){
+    clickHandle(newCity){
     	console.log(newCity);
     	this.props.changeCityFn(newCity);
     }
